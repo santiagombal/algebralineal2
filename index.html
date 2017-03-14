@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Prueba Lineal</title>
+		<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+		<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<link rel="stylesheet" href="style.css">
+		
+	</head>
+	<body onload="init();">
+
+		<div class='Entrada'>
+			<h1 class='Titulo'> Determinantes </h1>
+			<p> Para aquellos que aún sientan que el determinante es un objeto misterioso y de dudosa procedencia, aquí hay otro punto de vista que ayuda a entender su utilidad e importancia.</p>
+
+			<p> Consideremos el sencillo caso de \( \mathbb{R}^2 \). Cada par de vectores \(v_1,v_2\) forma un paralelogramo en el plano. Supongamos por un
+			momento que no sabemos como calcular su area y deseamos una fórmula con la cual determinarla. En otras palabras, deseamos conocer detalladamente
+			la función 
+			$$Area: \mathbb{R}^2 \times \mathbb{R}^2 \rightarrow \mathbb{R} $$
+			$$ v_1,v_2 \mapsto Area(Paralelogramo(v_1,v_2)) $$
+			que a cada par de vectores le asigna el area del paralelogramo formado
+			por ellos. Y quizá por motivos aún misteriosos, queremos determinar la <em> orientación </em> de dicho paralelogramo.</p>
+
+			<p> Ahora explicaremos a que nos referimos con orientación. En el plano esto es relativamente sencillo de hacer, pero en dimensiones superiores se
+			hace uso del concepto de determinante, por lo que lo dejaremos para después. Cada par ordenado de vectores linealmente independientes define una dirección en la que se recorre el plano de la siguiente manera: Tomen el primer vector y rótenlo hacia el segundo vector, tomando el camino más corto. Esta rotación se hace en sentido de las manecillas del reloj, o en la dirección contraria. Cada una de estas maneras de rotar es una orientación distinta. De este modo, todo par ordenado de vectores define una orientación, ya sea en el sentido de las manecillas del reloj o en la dirección contraria.</p>
+
+			<p> Por el momento vamos a decir que si se gira en el sentido contrario a las manecillas del reloj, como con la base canónica \(e_1,e_2\), entonces
+			está orientado positivamente, y en el caso contrario que está orientado negativamente. Y después de haber explicado tan tediosamente el concepto de orientación, entonces queda claro cual es nuestro objetivo. Queremos determinar la función de \(Area \) considerando que si el par de vectores determina una orientación positiva, entonces el area del paralelogramo definido por ellos es positiva, y en el caso contrario, negativa.</p>
+
+			<div id="canvasCont" onload="init()">
+				<canvas id="canvas" width="800" height="400" ></canvas>
+			</div>
+			<script type="application/javascript" src="prueba.js" > </script>
+		</div>
+
+
+		
+	</body>
+</html>

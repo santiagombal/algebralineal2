@@ -1,0 +1,19 @@
+body {
+	background-color: #30363D;
+	font-family: Helvetica;
+}
+
+.Entrada {
+	width: 800px;
+	background-color: #98B0B0;
+	margin: auto;
+	padding: 20px;
+	text-align: justify;
+}
+
+.Titulo {
+	margin: 50px;
+	padding: 60px;
+	text-align: center;
+	background-color: yellow;
+}
